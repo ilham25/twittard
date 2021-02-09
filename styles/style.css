@@ -231,6 +231,9 @@ body {
   .container .container-gen .generated {
     margin-bottom: 1rem;
   }
+  .container .container-gen .generated .header-gen {
+    gap: 0;
+  }
   .container .container-gen .generated .header-gen .photo img {
     height: 8vh;
     width: 8vh;

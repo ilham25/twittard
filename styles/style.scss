@@ -169,7 +169,9 @@ body {
       padding-bottom: 1rem;
       .generated {
         margin-bottom: 1rem;
+
         .header-gen {
+          gap: 0;
           .photo {
             img {
               height: 8vh;
