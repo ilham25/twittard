@@ -228,9 +228,15 @@ body {
     padding: 0;
     padding-bottom: 1rem;
   }
+  .container .container-gen .generated {
+    margin-bottom: 1rem;
+  }
   .container .container-gen .generated .header-gen .photo img {
     height: 8vh;
     width: 8vh;
+  }
+  .container .container-gen .generated .header-gen .text {
+    margin-right: 1rem;
   }
   .container .container-gen .generated .header-gen .text .head {
     display: -webkit-box;
