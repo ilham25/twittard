@@ -150,6 +150,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 
 .container .container-gen .generated .header-gen .text .head .name {
