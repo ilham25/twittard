@@ -105,7 +105,6 @@ body {
 .container .container-gen .generated {
   width: 100%;
   background-color: black;
-  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -230,9 +229,6 @@ body {
   }
   .container .container-gen .generated {
     margin-bottom: 1rem;
-  }
-  .container .container-gen .generated .header-gen {
-    gap: 0;
   }
   .container .container-gen .generated .header-gen .photo img {
     height: 8vh;
