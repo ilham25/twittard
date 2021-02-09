@@ -6,6 +6,7 @@ const thread = document.querySelector(".thread");
 
 const time = document.querySelector(".time");
 const date = document.querySelector(".date");
+const twitFor = document.querySelector(".twitfor");
 
 const generated = document.querySelector(".generated");
 
@@ -13,7 +14,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   name.innerText = form.elements[0].value;
   username.innerText = `@${form.elements[1].value}`;
-  thread.innerText = form.elements[3].value;
+  thread.innerText = form.elements[4].value;
 
   const current = new Date();
   var months = [
@@ -30,9 +31,14 @@ form.addEventListener("submit", (e) => {
     "Nov",
     "Dec",
   ];
-  time.innerText = `${current.getHours()}:${current.getMinutes()}`;
-  date.innerText = `${current.getDate()} ${months[current.getMonth()]
-    } ${current.getFullYear()}`;
+  const timeStr =
+    ("0" + current.getHours()).slice(-2) +
+    ":" +
+    ("0" + current.getMinutes()).slice(-2);
+  time.innerText = timeStr;
+  date.innerText = `${("0" + current.getDate()).slice(-2)} ${
+    months[current.getMonth()]
+  } ${current.getFullYear()}`;
 });
 
 const readURL = (input) => {
@@ -45,17 +51,16 @@ const readURL = (input) => {
   }
 };
 
+const isIphone = () => {
+  const checkBox = document.querySelector(".iphone");
+
+  checkBox.checked
+    ? (twitFor.innerText = "Twitter for iPhone")
+    : (twitFor.innerText = "Twitter for Android");
+};
+
 document.querySelector(".save").addEventListener("click", () => {
-  html2canvas(generated, {
-    backgroundColor: null,
-    scrollX: 0,
-    scrollY: -window.scrollY,
-    scale: 2,
-  }).then((canvas) => {
-    var link = document.createElement("a");
-    link.download = "thread-gen.png";
-    link.href = canvas.toDataURL();
-    link.click();
-    link.delete;
+  domtoimage.toBlob(generated).then(function (blob) {
+    window.saveAs(blob, "thread-gen.png");
   });
 });

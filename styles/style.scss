@@ -40,6 +40,7 @@ body {
       display: flex;
       justify-content: center;
       flex-direction: column;
+      gap: 5px;
       input {
         padding: 0.5em;
       }
@@ -93,8 +94,16 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-          .name {
-            color: $lightGrey;
+          .head {
+            display: flex;
+            align-items: center;
+            .name {
+              color: $lightGrey;
+            }
+            img {
+              margin-left: 5px;
+              height: 0.8vw;
+            }
           }
           .username {
             color: $darkGrey;
@@ -159,6 +168,19 @@ body {
             img {
               height: 8vh;
               width: 8vh;
+            }
+          }
+          .text {
+            .head {
+              display: flex;
+              align-items: center;
+              .name {
+                color: $lightGrey;
+              }
+              img {
+                margin-left: 5px;
+                height: 1.6vh;
+              }
             }
           }
         }

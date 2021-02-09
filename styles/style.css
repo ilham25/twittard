@@ -58,6 +58,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 5px;
 }
 
 .container .form-gen form input {
@@ -140,8 +141,22 @@ body {
           justify-content: space-evenly;
 }
 
-.container .container-gen .generated .header-gen .text .name {
+.container .container-gen .generated .header-gen .text .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container-gen .generated .header-gen .text .head .name {
   color: #acacac;
+}
+
+.container .container-gen .generated .header-gen .text .head img {
+  margin-left: 5px;
+  height: 0.8vw;
 }
 
 .container .container-gen .generated .header-gen .text .username {
@@ -212,6 +227,21 @@ body {
   .container .container-gen .generated .header-gen .photo img {
     height: 8vh;
     width: 8vh;
+  }
+  .container .container-gen .generated .header-gen .text .head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .container-gen .generated .header-gen .text .head .name {
+    color: #acacac;
+  }
+  .container .container-gen .generated .header-gen .text .head img {
+    margin-left: 5px;
+    height: 1.6vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

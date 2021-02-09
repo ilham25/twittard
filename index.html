@@ -49,6 +49,7 @@
           <input type="text" name="username" required />
           <label for="upload">Photo</label>
           <input type="file" name="upload" onchange="readURL(this)" />
+          iPhone : <input type="checkbox" onclick="isIphone()" class="iphone" />
           <label for="thread">Thread</label>
           <textarea name="thread" cols="30" rows="10" required></textarea>
           <button type="submit">Generate!</button>
@@ -61,7 +62,10 @@
               <img src="./assets/img/photo.jpg" class="pp-img" alt="photo" />
             </div>
             <div class="text">
-              <h4 class="name">Ilham Adiputra</h4>
+              <div class="head">
+                <h3 class="name">Ilham Adiputra</h3>
+                <img src="./assets/img/badge-dark.png" alt="badge" />
+              </div>
               <p class="username">@iruha25</p>
             </div>
           </div>
@@ -86,7 +90,8 @@
         <button class="save">Save</button>
       </div>
     </div>
-    <script src="./html2canvas.min.js"></script>
+    <script src="./dom-to-image.min.js"></script>
+    <script src="./FileSaver.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
